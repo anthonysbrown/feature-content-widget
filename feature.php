@@ -5,6 +5,7 @@ Plugin URI: http://codeable.io
 Description: A widget with a custom post type that allows you to view content, built for cinqsens
 Version: 1.0.0
 Author: Anthony Brown
+Text Domain: fcw
 Author URI: http://codeable.io
 */
 $feature_content_widget = new feature_content_widget;
@@ -17,10 +18,14 @@ add_shortcode('feature_content_box', array($feature_content_widget, 'shortcode')
 add_action( 'wp_ajax_fcw_ajax_solutions',  array($feature_content_widget, 'ajax_solutions') );
 add_action( 'wp_ajax_nopriv_fcw_ajax_solutions', array($feature_content_widget, 'ajax_solutions'));
 
+add_action('init', array($feature_content_widget, 'language'));
 class feature_content_widget{
 	
 	
-	
+	function language()
+{
+    load_plugin_textdomain('fcw', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+}
 	
 	
 	
@@ -49,7 +54,7 @@ function problems_dropdown(){
 
 
 	
-	$h.= '<select id="fcw-problems-dropdown" class="nice_select"><option value="">Choisir</option>';
+	$h.= '<select id="fcw-problems-dropdown" class="nice_select"><option value="">'.__('Choose', 'fcw').'</option>';
 	
 		if($terms){
 			
@@ -150,7 +155,7 @@ if ( $the_query->have_posts() ) {
 			<a href="'.$this->get_solution_url(fcw_url_get_meta( 'fcw_url_treatment_url' )).'" ><img src="'.$this->get_solution_image(get_the_id()).'"></a>
 			</div>
 			<div class="fcw-solution-row-middle"><h2><a href="'.$this->get_solution_url(fcw_url_get_meta( 'fcw_url_treatment_url' )).'" >'.get_the_title().'</a></h2><p>'.$solution_output.' - <span>'.get_the_excerpt().'</span></p></div>
-			<div class="fcw-solution-row-right"><a href="'.$this->get_solution_url(fcw_url_get_meta( 'fcw_url_treatment_url' )).'" class="button fcw-button">EN SAVOIR PLUS</a></div>
+			<div class="fcw-solution-row-right"><a href="'.$this->get_solution_url(fcw_url_get_meta( 'fcw_url_treatment_url' )).'" class="button fcw-button">'.__('LEARN MORE', 'fcw').'</a></div>
 			';
 	
 	
@@ -174,7 +179,7 @@ function view($atts){
 	
 	$h .= '<div class="fcw-wrapper">';
 	$h .= '<div class="fcw-header">';
-	$h .= '<div class="fcw-header-left"><hr>QUE DÉSIREZ-VOUS TRAITER ?</div>';
+	$h .= '<div class="fcw-header-left"><hr>'.__("What type of treamtment do you need?", 'fcw').'</div>';
 	$h .= '<div class="fcw-header-right">'.$this->problems_dropdown().'</div>';
 	$h .= '<div style="clear:both"></div></div>';
 	$h .= '<div class="fcw-solutions"></div>';
@@ -185,35 +190,35 @@ function view($atts){
 function post_type() {
 
 	$labels = array(
-		'name'                  => _x( 'Treatments', 'Post Type General Name', 'feature_content_widget' ),
-		'singular_name'         => _x( 'Treatment', 'Post Type Singular Name', 'feature_content_widget' ),
-		'menu_name'             => __( 'Treatments', 'feature_content_widget' ),
-		'name_admin_bar'        => __( 'Treatments', 'feature_content_widget' ),
-		'archives'              => __( 'Item Archives', 'feature_content_widget' ),
-		'parent_item_colon'     => __( 'Parent Item:', 'feature_content_widget' ),
-		'all_items'             => __( 'All Items', 'feature_content_widget' ),
-		'add_new_item'          => __( 'Add New Item', 'feature_content_widget' ),
-		'add_new'               => __( 'Add New', 'feature_content_widget' ),
-		'new_item'              => __( 'New Item', 'feature_content_widget' ),
-		'edit_item'             => __( 'Edit Item', 'feature_content_widget' ),
-		'update_item'           => __( 'Update Item', 'feature_content_widget' ),
-		'view_item'             => __( 'View Item', 'feature_content_widget' ),
-		'search_items'          => __( 'Search Item', 'feature_content_widget' ),
-		'not_found'             => __( 'Not found', 'feature_content_widget' ),
-		'not_found_in_trash'    => __( 'Not found in Trash', 'feature_content_widget' ),
-		'featured_image'        => __( 'Featured Image', 'feature_content_widget' ),
-		'set_featured_image'    => __( 'Set featured image', 'feature_content_widget' ),
-		'remove_featured_image' => __( 'Remove featured image', 'feature_content_widget' ),
-		'use_featured_image'    => __( 'Use as featured image', 'feature_content_widget' ),
-		'insert_into_item'      => __( 'Insert into item', 'feature_content_widget' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this item', 'feature_content_widget' ),
-		'items_list'            => __( 'Items list', 'feature_content_widget' ),
-		'items_list_navigation' => __( 'Items list navigation', 'feature_content_widget' ),
-		'filter_items_list'     => __( 'Filter items list', 'feature_content_widget' ),
+		'name'                  => __( 'Treatments', 'fcw' ),
+		'singular_name'         => __( 'Treatment',  'fcw' ),
+		'menu_name'             => __( 'Treatments', 'fcw' ),
+		'name_admin_bar'        => __( 'Treatments', 'fcw' ),
+		'archives'              => __( 'Item Archives', 'fcw' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'fcw' ),
+		'all_items'             => __( 'All Items', 'fcw' ),
+		'add_new_item'          => __( 'Add New Item', 'fcw' ),
+		'add_new'               => __( 'Add New', 'fcw' ),
+		'new_item'              => __( 'New Item', 'fcw' ),
+		'edit_item'             => __( 'Edit Item', 'fcw' ),
+		'update_item'           => __( 'Update Item', 'fcw' ),
+		'view_item'             => __( 'View Item', 'fcw' ),
+		'search_items'          => __( 'Search Item', 'fcw' ),
+		'not_found'             => __( 'Not found', 'fcw' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'fcw' ),
+		'featured_image'        => __( 'Featured Image', 'fcw' ),
+		'set_featured_image'    => __( 'Set featured image', 'fcw' ),
+		'remove_featured_image' => __( 'Remove featured image', 'fcw' ),
+		'use_featured_image'    => __( 'Use as featured image', 'fcw' ),
+		'insert_into_item'      => __( 'Insert into item', 'fcw' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'fcw' ),
+		'items_list'            => __( 'Items list', 'fcw' ),
+		'items_list_navigation' => __( 'Items list navigation', 'fcw' ),
+		'filter_items_list'     => __( 'Filter items list', 'fcw' ),
 	);
 	$args = array(
-		'label'                 => __( 'Treatment', 'feature_content_widget' ),
-		'description'           => __( 'Treaments', 'feature_content_widget' ),
+		'label'                 => __( 'Treatment', 'fcw' ),
+		'description'           => __( 'Treaments', 'fcw' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title',  'excerpt'),
 		'taxonomies'            => array(false),
@@ -235,22 +240,22 @@ function post_type() {
 	
 	
 	$labels = array(
-		'name'                       => _x( 'Problems', 'taxonomy general name' ),
-		'singular_name'              => _x( 'Problem', 'taxonomy singular name' ),
-		'search_items'               => __( 'Search Problems' ),
-		'popular_items'              => __( 'Popular Problems' ),
-		'all_items'                  => __( 'All Problems' ),
+		'name'                       => __( 'Problems', 'fcw'),
+		'singular_name'              => __( 'Problem', 'fcw'),
+		'search_items'               => __( 'Search Problems', 'fcw'),
+		'popular_items'              => __( 'Popular Problems', 'fcw'),
+		'all_items'                  => __( 'All Problems', 'fcw' ),
 		'parent_item'                => null,
 		'parent_item_colon'          => null,
-		'edit_item'                  => __( 'Edit Problem' ),
-		'update_item'                => __( 'Update Problem' ),
-		'add_new_item'               => __( 'Add New Problem' ),
-		'new_item_name'              => __( 'New Problem Name' ),
-		'separate_items_with_commas' => __( 'Separate problems with commas' ),
-		'add_or_remove_items'        => __( 'Add or remove problems' ),
-		'choose_from_most_used'      => __( 'Choose from the most used problems' ),
-		'not_found'                  => __( 'No problems found.' ),
-		'menu_name'                  => __( 'Problems' ),
+		'edit_item'                  => __( 'Edit Problem', 'fcw' ),
+		'update_item'                => __( 'Update Problem', 'fcw' ),
+		'add_new_item'               => __( 'Add New Problem' , 'fcw'),
+		'new_item_name'              => __( 'New Problem Name', 'fcw' ),
+		'separate_items_with_commas' => __( 'Separate problems with commas', 'fcw' ),
+		'add_or_remove_items'        => __( 'Add or remove problems', 'fcw' ),
+		'choose_from_most_used'      => __( 'Choose from the most used problems', 'fcw'),
+		'not_found'                  => __( 'No problems found.', 'fcw' ),
+		'menu_name'                  => __( 'Problems', 'fcw' ),
 	);
 	register_taxonomy(
 		'problem',
@@ -263,22 +268,22 @@ function post_type() {
 	);
 unset($labels);
 $labels = array(
-		'name'                       => _x( 'Types', 'taxonomy general name' ),
-		'singular_name'              => _x( 'Type', 'taxonomy singular name' ),
-		'search_items'               => __( 'Search Types' ),
-		'popular_items'              => __( 'Popular Types' ),
-		'all_items'                  => __( 'All Types' ),
+		'name'                       => __( 'Types', 'fcw'),
+		'singular_name'              => __( 'Type', 'fcw'),
+		'search_items'               => __( 'Search Types' , 'fcw'),
+		'popular_items'              => __( 'Popular Types' , 'fcw'),
+		'all_items'                  => __( 'All Types', 'fcw' ),
 		'parent_item'                => null,
 		'parent_item_colon'          => null,
-		'edit_item'                  => __( 'Edit Type' ),
-		'update_item'                => __( 'Update Type' ),
-		'add_new_item'               => __( 'Add New Type' ),
-		'new_item_name'              => __( 'New Type Name' ),
-		'separate_items_with_commas' => __( 'Separate Types with commas' ),
-		'add_or_remove_items'        => __( 'Add or remove Types' ),
-		'choose_from_most_used'      => __( 'Choose from the most used Types' ),
-		'not_found'                  => __( 'No Types found.' ),
-		'menu_name'                  => __( 'Types' ),
+		'edit_item'                  => __( 'Edit Type', 'fcw' ),
+		'update_item'                => __( 'Update Type', 'fcw' ),
+		'add_new_item'               => __( 'Add New Type' , 'fcw'),
+		'new_item_name'              => __( 'New Type Name', 'fcw' ),
+		'separate_items_with_commas' => __( 'Separate Types with commas', 'fcw' ),
+		'add_or_remove_items'        => __( 'Add or remove Types', 'fcw' ),
+		'choose_from_most_used'      => __( 'Choose from the most used Types', 'fcw' ),
+		'not_found'                  => __( 'No Types found.', 'fcw' ),
+		'menu_name'                  => __( 'Types' , 'fcw'),
 	);
 register_taxonomy(
 		'type',

@@ -11,8 +11,8 @@ class Fcw_Widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'fcw_widget', // Base ID
-			__( 'Treatment Problems', 'text_domain' ), // Name
-			array( 'description' => __( 'A widget to display problems and treatments', 'text_domain' ), ) // Args
+			__( 'Treatment Problems', 'fcw' ), // Name
+			array( 'description' => __( 'A widget to display problems and treatments', 'fcw' ), ) // Args
 		);
 	}
 

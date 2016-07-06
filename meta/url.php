@@ -14,7 +14,7 @@ function fcw_url_get_meta( $value ) {
 function fcw_url_add_meta_box() {
 	add_meta_box(
 		'url-url',
-		__( 'Treatment Page', 'url' ),
+		__( 'Treatment Page', 'fcw' ),
 		'fcw_url_html',
 		'treatment',
 		'normal',
