@@ -9,16 +9,18 @@ Text Domain: fcw
 Author URI: http://codeable.io
 */
 $feature_content_widget = new feature_content_widget;
+add_action('init', array($feature_content_widget, 'language'));
+add_action( 'init',array($feature_content_widget, 'post_type') );
 add_action('wp_enqueue_scripts',array($feature_content_widget, 'scripts'));
 
-add_action( 'init',array($feature_content_widget, 'post_type'), 0 );
+
 add_shortcode('feature_content_box', array($feature_content_widget, 'shortcode'));
 
 
 add_action( 'wp_ajax_fcw_ajax_solutions',  array($feature_content_widget, 'ajax_solutions') );
 add_action( 'wp_ajax_nopriv_fcw_ajax_solutions', array($feature_content_widget, 'ajax_solutions'));
 
-add_action('init', array($feature_content_widget, 'language'));
+
 class feature_content_widget{
 	
 	

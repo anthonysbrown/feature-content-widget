@@ -1,0 +1,266 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: Feature Content Widget for Cinqsens\n"
+"POT-Creation-Date: 2016-07-07 19:24-0400\n"
+"PO-Revision-Date: 2016-07-07 19:25-0400\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: feature.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: en\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: feature.php:57
+msgid "Choose"
+msgstr "Choose"
+
+#: feature.php:158
+msgid "LEARN MORE"
+msgstr "LEARN MORE"
+
+#: feature.php:182
+msgid "What type of treamtment do you need?"
+msgstr "What type of treamtment do you need?"
+
+#: feature.php:193 feature.php:195 feature.php:196
+msgid "Treatments"
+msgstr "Treatments"
+
+#: feature.php:194 feature.php:220
+msgid "Treatment"
+msgstr "Treatment"
+
+#: feature.php:197
+msgid "Item Archives"
+msgstr "Item Archives"
+
+#: feature.php:198
+msgid "Parent Item:"
+msgstr "Parent Item:"
+
+#: feature.php:199
+msgid "All Items"
+msgstr "All Items"
+
+#: feature.php:200
+msgid "Add New Item"
+msgstr "Add New Item"
+
+#: feature.php:201
+msgid "Add New"
+msgstr "Add New"
+
+#: feature.php:202
+msgid "New Item"
+msgstr "New Item"
+
+#: feature.php:203
+msgid "Edit Item"
+msgstr "Edit Item"
+
+#: feature.php:204
+msgid "Update Item"
+msgstr "Update Item"
+
+#: feature.php:205
+msgid "View Item"
+msgstr "View Item"
+
+#: feature.php:206
+msgid "Search Item"
+msgstr "Search Item"
+
+#: feature.php:207
+msgid "Not found"
+msgstr "Not found"
+
+#: feature.php:208
+msgid "Not found in Trash"
+msgstr "Not found in Trash"
+
+#: feature.php:209
+msgid "Featured Image"
+msgstr "Featured Image"
+
+#: feature.php:210
+msgid "Set featured image"
+msgstr "Set featured image"
+
+#: feature.php:211
+msgid "Remove featured image"
+msgstr "Remove featured image"
+
+#: feature.php:212
+msgid "Use as featured image"
+msgstr "Use as featured image"
+
+#: feature.php:213
+msgid "Insert into item"
+msgstr "Insert into item"
+
+#: feature.php:214
+msgid "Uploaded to this item"
+msgstr "Uploaded to this item"
+
+#: feature.php:215
+msgid "Items list"
+msgstr "Items list"
+
+#: feature.php:216
+msgid "Items list navigation"
+msgstr "Items list navigation"
+
+#: feature.php:217
+msgid "Filter items list"
+msgstr "Filter items list"
+
+#: feature.php:221
+msgid "Treaments"
+msgstr "Treaments"
+
+#: feature.php:243 feature.php:258
+msgid "Problems"
+msgstr "Problems"
+
+#: feature.php:244
+msgid "Problem"
+msgstr "Problem"
+
+#: feature.php:245
+msgid "Search Problems"
+msgstr "Search Problems"
+
+#: feature.php:246
+msgid "Popular Problems"
+msgstr "Popular Problems"
+
+#: feature.php:247
+msgid "All Problems"
+msgstr "All Problems"
+
+#: feature.php:250
+msgid "Edit Problem"
+msgstr "Edit Problem"
+
+#: feature.php:251
+msgid "Update Problem"
+msgstr "Update Problem"
+
+#: feature.php:252
+msgid "Add New Problem"
+msgstr "Add New Problem"
+
+#: feature.php:253
+msgid "New Problem Name"
+msgstr "New Problem Name"
+
+#: feature.php:254
+msgid "Separate problems with commas"
+msgstr "Separate problems with commas"
+
+#: feature.php:255
+msgid "Add or remove problems"
+msgstr "Add or remove problems"
+
+#: feature.php:256
+msgid "Choose from the most used problems"
+msgstr "Choose from the most used problems"
+
+#: feature.php:257
+msgid "No problems found."
+msgstr "No problems found."
+
+#: feature.php:271 feature.php:286
+msgid "Types"
+msgstr "Types"
+
+#: feature.php:272
+msgid "Type"
+msgstr "Type"
+
+#: feature.php:273
+msgid "Search Types"
+msgstr "Search Types"
+
+#: feature.php:274
+msgid "Popular Types"
+msgstr "Popular Types"
+
+#: feature.php:275
+msgid "All Types"
+msgstr "All Types"
+
+#: feature.php:278
+msgid "Edit Type"
+msgstr "Edit Type"
+
+#: feature.php:279
+msgid "Update Type"
+msgstr "Update Type"
+
+#: feature.php:280
+msgid "Add New Type"
+msgstr "Add New Type"
+
+#: feature.php:281
+msgid "New Type Name"
+msgstr "New Type Name"
+
+#: feature.php:282
+msgid "Separate Types with commas"
+msgstr "Separate Types with commas"
+
+#: feature.php:283
+msgid "Add or remove Types"
+msgstr "Add or remove Types"
+
+#: feature.php:284
+msgid "Choose from the most used Types"
+msgstr "Choose from the most used Types"
+
+#: feature.php:285
+msgid "No Types found."
+msgstr "No Types found."
+
+#: meta/url.php:17
+msgid "Treatment Page"
+msgstr "Treatment Page"
+
+#: widgets/filter-widget.php:14
+msgid "Treatment Problems"
+msgstr "Treatment Problems"
+
+#: widgets/filter-widget.php:15
+msgid "A widget to display problems and treatments"
+msgstr "A widget to display problems and treatments"
+
+#. Plugin Name of the plugin/theme
+msgid "Feature Content Widget for Cinqsens"
+msgstr "Feature Content Widget for Cinqsens"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://codeable.io"
+msgstr "http://codeable.io"
+
+#. Description of the plugin/theme
+msgid ""
+"A widget with a custom post type that allows you to view content, built for "
+"cinqsens"
+msgstr ""
+"A widget with a custom post type that allows you to view content, built for "
+"cinqsens"
+
+#. Author of the plugin/theme
+msgid "Anthony Brown"
+msgstr "Anthony Brown"
